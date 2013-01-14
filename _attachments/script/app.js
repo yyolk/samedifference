@@ -46,12 +46,30 @@ $(function() {
     
     $("#input").html($.mustache($("#new-message").html()));
     
-
+    function setColor(){
+      var colors = [
+            "#8AB692",
+            "#5685A1",
+            "#46A198",
+            "#57907D",
+            "#8DB1A7",
+            "#83A1A3",
+            "#ACC9CD",
+            "#75A5B1",
+            "#688D97"
+          ];
+      $("input[name='color']").val(colors[Math.floor(Math.random()*colors.length)]);
+    }
+    setColor();
     $("#create-message").submit(function(e){
         e.preventDefault();
         var form = this, doc = $(form).serializeObject();
         doc.created_at = new Date();
-        db.saveDoc(doc, {success : function() {form.reset();}});
+        db.saveDoc(doc, {success : function() {
+            form.reset();
+            setColor();
+            }
+        });
         return false;
     }).find("input").focus();
  });

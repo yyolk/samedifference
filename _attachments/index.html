@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Studio Thread</title>
+    <title>SameDifference</title>
     <link rel="stylesheet" href="style/main.css" type="text/css">
   </head>
   <body>
     
-
-    <div id="input">
-    </div>
+    <div id="input"></div>
     <div id="content"></div>
 
   </body>
@@ -25,16 +23,16 @@
   <script id="new-message" type="text/x-mustache" charset="utf-8">
       <form id="create-message">
         <label>message:<input type="text" name="message" size=77 value=""></label>
+        <input type="hidden" name="color" value="">
       </form>
       <div style="clear:left;"></div>
   </script>
-
   <script id="recent-messages" type="text/x-mustache" charset="utf-8">
         <ul id="items">
           {{#items}}
             <li>
-              <p>{{message}}</p>
-            </li>  
+              <p style="background-color:{{{color}}}">{{message}}</p>
+            </li> 
           {{/items}}
         </ul>
   </script>
