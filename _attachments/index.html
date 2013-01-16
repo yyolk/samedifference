@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>SameDifference</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
+    <link rel="stylesheet" href="style/screen.css" type="text/css">
   </head>
   <body>
     
@@ -21,17 +21,13 @@
 
 <!-- templates used by app.js -->
   <script id="new-message" type="text/x-mustache" charset="utf-8">
-      <form id="create-message">
-        
-        <input type="hidden" name="color" value="">
-      </form>
       <div style="clear:left;"></div>
   </script>
   <script id="recent-messages" type="text/x-mustache" charset="utf-8">
         <div id="items">
           {{#items}}
             <div>
-              <p style="background-color:{{{color}}}">{{message}}</p>
+              <p style="background-color:{{{color}}}">&nbsp;</p>
             </div>
           {{/items}}
         </div>
@@ -82,7 +78,7 @@
         var form = $("#create-message");//, doc = $(form).serializeObject();
         var doc = {};
         doc.created_at = new Date();
-        doc.message = "&nbsp;"
+        //doc.message = "&nbsp;"
         doc.color = setColor();
         db.saveDoc(doc, {success : function() {
             
