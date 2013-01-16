@@ -58,9 +58,13 @@ $(function() {
             "#75A5B1",
             "#688D97"
           ];
-      $("input[name='color']").val(colors[Math.floor(Math.random()*colors.length)]);
+
+      //simple random by size of list
     }
     setColor();
+
+
+
     $("#create-message").submit(function(e){
         e.preventDefault();
         var form = this, doc = $(form).serializeObject();
