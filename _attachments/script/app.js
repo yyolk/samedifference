@@ -44,7 +44,7 @@ $(function() {
         }
     }
     
-    $("#input").html($.mustache($("#new-message").html()));
+    //$("#input").html($.mustache($("#new-message").html()));
     
     function setColor(){
       var colors = [
