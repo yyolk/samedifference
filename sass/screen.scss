@@ -5,4 +5,65 @@
 
 @import "compass/reset";
 // body{min-height:100%!important;}
+
+@import "compass/layout/stretching";
+@import "compass/utilities";
+@import "compass/css3";
+
+#bbox{
+  .stretched{
+    $stretch-color: #4c6b99;
+    border: 3px solid $stretch-color;
+    @include border-radius(8px);
+    display: block;
+    background-color: darken($stretch-color, 30%);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5em;
+  }
+  position:fixed;
+  width:90%;
+  height:5%;
+
+  a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-transform:uppercase;
+    @include inline-block;
+    @extend .stretched;
+    @include stretch(5%,5%,5%,5%);
+  }
+}
+
 p {height:13px;}
+
+p._75A5B1{
+  background-color:#75A5B1;
+  padding:150px;
+}
+p._46A198{
+  background-color:#46A198;
+}
+p._ACC9CD{
+  background-color:#ACC9CD;
+}
+p._5685A1{
+  background-color:#5685A1;
+}
+p._8AB692{
+  background-color:#8AB692;
+}
+p._57907D{
+  background-color:#57907D;
+}
+p._8DB1A7{
+  background-color:#8DB1A7;
+}
+p._83A1A3{
+  background-color:#83A1A3;
+}
+p._688D97{
+  background-color:#688D97;
+}

@@ -1,0 +1,39 @@
+[
+{
+  "from": "favicon.ico",
+  "to": "favicon.ico"
+},
+{
+  "from": "style/*",
+  "to": "/style/*"
+},
+{
+  "from": "vendor/*",
+  "to": "/vendor/*"
+},
+{
+  "from": "script/*",
+  "to": "/script/*"
+},
+{
+  "from": "_views/*",
+  "to": "../../../_views/recent-items/*",
+  "query" : {
+    "descending" : true,
+    "limit" : 5,
+    "front" : true
+  }
+},
+{
+  "from": "samedifference/*",
+  "to": "../../../samedifference/*"
+},
+{
+  "from": "/",
+  "to": "index.html"
+},
+{
+  "from": "*",
+  "to": "*"
+}
+]

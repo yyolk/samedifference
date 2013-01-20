@@ -5,13 +5,6 @@
     <link rel="stylesheet" href="style/screen.css" type="text/css">
   </head>
   <body>
-
-
-    <div id="bbox">
-      <a href="https://yolk.iriscouch.com/samedifference/_design/app/gallery.html" alt="gallery-link">gallery-mode</a>
-    </div>
-    
-
     <div id="items">
     <!-- content goes here -->
     </div>
@@ -40,6 +33,55 @@
   </script>
   <script src="script/app.js"></script>
 
+  <script>
+  var count = 0;
+  var colors = [
+    "75A5B1",
+    "46A198",
+    "ACC9CD",
+    "5685A1",
+    "8AB692",
+    "57907D",
+    "8DB1A7",
+    "83A1A3",
+    "688D97"
+    ];
+
+    function setColor(){
+
+      //simple random by size of list
+      count++;
+
+      if (count>8)count=0;
+      console.log(count);
+      console.log("colors: %s", colors[count]);
+      return colors[count];
+    }
+
+    setColor();
+    
+    var design = "app",
+        db = $.couch.db("samedifference");
+    function pushMessage(){
+        
+        var form = $("#create-message");//, doc = $(form).serializeObject();
+        var doc = {};
+        doc.created_at = new Date();
+        //doc.message = "&nbsp;"
+        doc.color = setColor();
+        db.saveDoc(doc, {success : function() {
+
+          } });
+        setTimeout("pushMessage()", 13333);
+    };
+
+    pushMessage();
+
+    setTimeout("document.location.reload()", 3600*1000); //refresh the page every hour
+
+  </script>
+
+
   <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -52,7 +94,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-
+  </script>
 
 </html>

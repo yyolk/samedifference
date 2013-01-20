@@ -17,9 +17,12 @@ $(function() {
         return o;
     };
 
-    var path = unescape(document.location.pathname).split('/'),
-        design = path[3],
-        db = $.couch.db(path[1]);
+    // var path = unescape(document.location.pathname).split('/'),
+    //     design = path[3],
+    //     db = $.couch.db(path[1]);
+
+    var design = "app",
+        db = $.couch.db("samedifference");
     function drawItems() {
         db.view(design + "/recent-items", {
             descending : "true",
@@ -30,7 +33,7 @@ $(function() {
                 var them = $.mustache($("#recent-messages").html(), {
                     items : data.rows.map(function(r) {return r.value;})
                 });
-                $("body").prepend(them);
+                $("#items").prepend(them);
             }
         });
     };
@@ -63,17 +66,4 @@ $(function() {
     }
     setColor();
 
-
-
-    $("#create-message").submit(function(e){
-        e.preventDefault();
-        var form = this, doc = $(form).serializeObject();
-        doc.created_at = new Date();
-        db.saveDoc(doc, {success : function() {
-            form.reset();
-            setColor();
-            }
-        });
-        return false;
-    }).find("input").focus();
  });
