@@ -17,7 +17,7 @@
 },
 {
   "from": "_views/*",
-  "to": "../../../_views/recent-items/*",
+  "to": "_views/recent-items/*",
   "query" : {
     "descending" : true,
     "limit" : 5,
@@ -26,10 +26,14 @@
 },
 {
   "from": "samedifference/*",
-  "to": "../../../samedifference/*"
+  "to": "/*"
 },
 {
   "from": "/",
+  "to": "index.html"
+},
+{
+  "from": "",
   "to": "index.html"
 },
 {
