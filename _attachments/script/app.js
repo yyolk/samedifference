@@ -34,13 +34,6 @@ $(function() {
                     items : data.rows.map(function(r) {return r.value;})
                 });
                 $("#items").prepend(them);
-                $("#items").each(function(){
-                    $(this).removeClass('grow');
-                });
-                $(them).each(function(){
-                    $(this).addClass("grow");
-                });
-
             }
         });
     };
