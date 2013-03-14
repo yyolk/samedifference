@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
-require 'animate'
+# require 'animate'
+require 'animation'
 require 'compass-recipes'
 
 

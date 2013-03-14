@@ -1,9 +1,5 @@
 [
 {
-  "from": "favicon.ico",
-  "to": "favicon.ico"
-},
-{
   "from": "style/*",
   "to": "/style/*"
 },
@@ -16,8 +12,8 @@
   "to": "/script/*"
 },
 {
-  "from": "_views/*",
-  "to": "_views/recent-items/*",
+  "from": "_views/",
+  "to": "../../../_views/",
   "query" : {
     "descending" : true,
     "limit" : 5,
@@ -26,11 +22,12 @@
 },
 {
   "from": "samedifference/*",
-  "to": "/*"
+  "to": "../../../samedifference/*"
 },
 {
   "from": "/",
   "to": "index.html"
+  
 },
 {
   "from": "",

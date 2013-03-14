@@ -36,24 +36,78 @@
     @include stretch(5%,5%,5%,5%);
   }
 }
+@import "compass/css3";
+@import "animation";
 
-p {height:13px;}
+@include keyframes(growA){
+  from{
+    padding:0px;
+  }
+  to {
+    padding:222px;
+  }
+}
+@include keyframes(growB){
+  from{
+    padding:0px;
+  }
+  to {
+    padding:90px;
+  }
+}
+@include keyframes(growC){
+  from{
+    padding:0px;
+  }
+  to {
+    padding:44px;
+  }
+}
+@include keyframes(growD){
+  from{
+    margin:0px;
+  }
+  to {
+    margin:5px;
+  }
+}
+@include keyframes(bloop){
+  from{
+    scale:0;
+  }
+  to {
+    scale:1;
+  }
+}
+.grow{
+  @include animation(growD 1s 1);
+}
+p {
+  height:13px;
+  padding:0px;
+  // @include transition-duration(2s);
+  // @include animation(growA 2s infinite); // wall
+}
 
 p._75A5B1{
   background-color:#75A5B1;
-  padding:222px;
+  // @include animation(growA 1s 1);
+  // padding:222px;
 }
 p._46A198{
   background-color:#46A198;
-  padding:90px;
+  // @include animation(growB .6s 1);
+  // padding:90px;
 }
 p._ACC9CD{
   background-color:#ACC9CD;
-  padding:44px;
+  // @include animation(growC .3s 1);
+  // padding:44px;
 }
 p._5685A1{
   background-color:#5685A1;
-  padding:30px;
+  // @include animation(growD .2s 1);
+  // padding:30px;
 }
 p._8AB692{
   background-color:#8AB692;
@@ -69,4 +123,17 @@ p._83A1A3{
 }
 p._688D97{
   background-color:#688D97;
+}
+
+#count{
+  position:fixed;
+  z-index:5;
+  margin:0 auto;
+  font-size:300%;
+  width: auto;
+  @include inline-block;
+
+  .tick{
+    color:white;
+  }
 }

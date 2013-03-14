@@ -1,1 +1,10 @@
-{}
+{
+  "env" : {
+    "default" : {
+      "db" : "http://admin:durhamio22@54.235.139.192/samedifference"
+    },
+    "prod" : {
+      "db" : "http://admin:durhamio22@54.235.139.192/samedifference"
+    }
+  }
+}
