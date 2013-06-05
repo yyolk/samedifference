@@ -3,12 +3,19 @@
   <head>
     <title>SameDifference</title>
     <link rel="stylesheet" href="style/screen.css" type="text/css">
+    <meta property="og:title" content="SameDifference">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://samedifference.io">
+    <meta property="og:image" content="http://i.imgur.com/XEDGNJk.png">
+    <meta property="og:description" content="SAMEDIFFERENCE">
+
   </head>
   <body>
     <div id="count"><p class="tick">0</p></div>
     <div id="items">
     <!-- content goes here -->
     </div>
+
   </body>
   <script src="vendor/iriscouch/sha1.js"></script>
   <script src="vendor/iriscouch/json2.js"></script>
@@ -78,9 +85,10 @@
         //doc.message = "&nbsp;"
         doc.color = setColor();
         db.saveDoc(doc, {success : function() {
-
+            _gaq.push(['_trackEvent', 'Growth', 'Grow', '+1']);
           } });
         setTimeout("pushMessage()", 1000);
+
         $.ajax({
           url: 'http://samedifference.io/_view/count?reduce=true',
           type: 'get',
@@ -92,7 +100,7 @@
 
     pushMessage();
 
-    // setTimeout("document.location.reload()", 3600*1000); //refresh the page every hour
+    setTimeout("document.location.reload()", 3600*1000); //refresh the page every hour
 
   </script>
 
