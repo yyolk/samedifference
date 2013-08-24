@@ -21,10 +21,6 @@
   }
 },
 {
-  "from": "samedifference/*",
-  "to": "../../../samedifference/*"
-},
-{
   "from": "/",
   "to": "index.html"
   
