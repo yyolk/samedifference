@@ -21,8 +21,6 @@
   <script src="vendor/iriscouch/json2.js"></script>
   <script src="vendor/iriscouch/jquery.js"></script>
   <script src="vendor/iriscouch/jquery.couch.js"></script>
-  <script src="vendor/couchapp/jquery.couchLogin.js"></script>
-  <script src="vendor/couchapp/jquery.couchProfile.js"></script>
   <script src="vendor/couchapp/md5.js"></script>
   <script src="vendor/couchapp/jquery.mustache.js"></script>
 
@@ -89,13 +87,13 @@
           } });
         setTimeout("pushMessage()", 1000);
 
-        $.ajax({
-          url: 'http://samedifference.io/_view/count?reduce=true',
-          type: 'get',
-          dataType: 'jsonp',
-          async: false,
-          success: function(data) { totalCount = data.rows[0].value; $('#count .tick').text(totalCount);}
-        });
+        // $.ajax({
+        //   url: 'http://samedifference.io/_view/count?reduce=true',
+        //   type: 'get',
+        //   dataType: 'jsonp',
+        //   async: false,
+        //   success: function(data) { totalCount = data.rows[0].value; $('#count .tick').text(totalCount);}
+        // });
     };
 
     pushMessage();

@@ -1,15 +1,15 @@
 [
 {
   "from": "style/*",
-  "to": "/style/*"
+  "to": "style/*"
 },
 {
   "from": "vendor/*",
-  "to": "/vendor/*"
+  "to": "vendor/*"
 },
 {
   "from": "script/*",
-  "to": "/script/*"
+  "to": "script/*"
 },
 {
   "from": "_views/",
@@ -22,6 +22,10 @@
 },
 {
   "from": "samedifference/*",
+  "to": "../../../samedifference/*"
+},
+{
+  "from": "/samedifference/*",
   "to": "../../../samedifference/*"
 },
 {

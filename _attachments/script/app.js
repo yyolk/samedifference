@@ -47,23 +47,23 @@ $(function() {
         }
     }
     
-    //$("#input").html($.mustache($("#new-message").html()));
+    // //$("#input").html($.mustache($("#new-message").html()));
     
-    function setColor(){
-      var colors = [
-            "#8AB692",
-            "#5685A1",
-            "#46A198",
-            "#57907D",
-            "#8DB1A7",
-            "#83A1A3",
-            "#ACC9CD",
-            "#75A5B1",
-            "#688D97"
-          ];
+    // function setColor(){
+    //   var colors = [
+    //         "#8AB692",
+    //         "#5685A1",
+    //         "#46A198",
+    //         "#57907D",
+    //         "#8DB1A7",
+    //         "#83A1A3",
+    //         "#ACC9CD",
+    //         "#75A5B1",
+    //         "#688D97"
+    //       ];
 
-      //simple random by size of list
-    }
-    setColor();
+    //   //simple random by size of list
+    // }
+    // setColor();
 
  });
